@@ -1,11 +1,11 @@
 # VERSION 1.10.4
-# AUTHOR: Matthieu "Puckel_" Roisil
+# AUTHOR: Matthieu "Puckel_" Roisil, datarods
 # DESCRIPTION: Basic Airflow container
-# BUILD: docker build --rm -t puckel/docker-airflow .
-# SOURCE: https://github.com/puckel/docker-airflow
+# BUILD: docker build --rm -t datarods/docker-airflow .
+# SOURCE: https://github.com/datarods/docker-airflow
 
 FROM python:3.7-slim-stretch
-LABEL maintainer="Puckel_"
+LABEL maintainer="datarods"
 
 # Never prompts the user for choices on installation/configuration of packages
 ENV DEBIAN_FRONTEND noninteractive
