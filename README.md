@@ -8,7 +8,7 @@
 
 This repository contains **Dockerfile** of [apache-airflow](https://github.com/apache/incubator-airflow) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/datarods/docker-airflow/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
-## Informations
+## Information
 
 * Based on Python (3.7-slim-stretch) official Image [python:3.7-slim-stretch](https://hub.docker.com/_/python/) and uses the official [Postgres](https://hub.docker.com/_/postgres/) as backend and [Redis](https://hub.docker.com/_/redis/) as queue
 * Install [Docker](https://www.docker.com/)
@@ -67,7 +67,7 @@ For encrypted connection passwords (in Local or Celery Executor), you must have 
 
     docker run datarods/docker-airflow python -c "from cryptography.fernet import Fernet; FERNET_KEY = Fernet.generate_key().decode(); print(FERNET_KEY)"
 
-## Configurating Airflow
+## Configuring Airflow
 
 It's possible to set any configuration value for Airflow from environment variables, which are used over values from the airflow.cfg.
 
@@ -124,4 +124,4 @@ You can also use this to run a bash shell or any other command in the same envir
 
 # Wanna help?
 
-Fork, improve and PR. ;-)
+Fork, improve and PR!
