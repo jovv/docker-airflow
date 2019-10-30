@@ -1,4 +1,3 @@
-# VERSION 1.10.4
 # AUTHOR: Matthieu "Puckel_" Roisil, datarods
 # DESCRIPTION: Basic Airflow container
 # BUILD: docker build --rm -t datarods/docker-airflow .
