@@ -13,7 +13,7 @@ services:
                 max-file: "3"
 
     webserver:
-        image: datarods/docker-airflow:1.10.4
+        image: datarods/docker-airflow:1.10.4-2
         restart: always
         depends_on:
             - postgres
