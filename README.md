@@ -1,12 +1,8 @@
 # docker-airflow
-[![CircleCI](https://circleci.com/gh/puckel/docker-airflow/tree/master.svg?style=svg)](https://circleci.com/gh/puckel/docker-airflow/tree/master)
-[![Docker Build Status](https://img.shields.io/docker/cloud/build/datarods/docker-airflow.svg)]()
+[![CI status](https://github.com/datarods/docker-airflow/workflows/ci/badge.svg?branch=master)](https://github.com/datarods/docker-airflow/actions?query=workflow%3Aci+branch%3Amaster)
+[![Docker Build status](https://img.shields.io/docker/cloud/build/datarods/docker-airflow.svg)](https://hub.docker.com/r/datarods/docker-airflow/tags)
 
-[![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://hub.docker.com/r/datarods/docker-airflow/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/datarods/docker-airflow.svg)]()
-[![Docker Stars](https://img.shields.io/docker/stars/datarods/docker-airflow.svg)]()
-
-This repository contains **Dockerfile** of [apache-airflow](https://github.com/apache/incubator-airflow) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/datarods/docker-airflow/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+This repository contains a **Dockerfile** for [apache-airflow](https://github.com/apache/incubator-airflow). It has a corresponding [automated build](https://registry.hub.docker.com/u/datarods/docker-airflow/) on Docker Hub.
 
 ## Information
 
