@@ -1,5 +1,5 @@
 # docker-airflow
-[![CI status](https://github.com/datarods/docker-airflow/workflows/ci/badge.svg?branch=master)](https://github.com/datarods/docker-airflow/actions?query=workflow%3Aci+branch%3Amaster)
+[![CI status](https://github.com/datarods/docker-airflow/workflows/ci/badge.svg?branch=master)](https://github.com/datarods/docker-airflow/actions?query=workflow%3Aci+branch%3Amaster+event%3Apush)
 [![Docker Build status](https://img.shields.io/docker/cloud/build/datarods/docker-airflow.svg)](https://hub.docker.com/r/datarods/docker-airflow/tags)
 
 This repository contains a **Dockerfile** for [apache-airflow](https://github.com/apache/incubator-airflow). It has a corresponding [automated build](https://registry.hub.docker.com/u/datarods/docker-airflow/) on Docker Hub.
