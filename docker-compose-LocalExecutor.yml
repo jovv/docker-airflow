@@ -26,8 +26,9 @@ services:
                 max-file: "3"
         volumes:
             - ./dags:/usr/local/airflow/dags
-            # Uncomment to include custom plugins
-            # - ./plugins:/usr/local/airflow/plugins
+#           - ./plugins:/usr/local/airflow/plugins
+#       env_file:
+#           - ./secrets.env  # Defines FERNET_KEY
         ports:
             - "8080:8080"
         command: webserver
