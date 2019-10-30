@@ -24,3 +24,10 @@ sftp-config.json
 
 # Python
 __pycache__
+venv
+
+# PyCharm
+.idea/
+
+# Secrets
+secrets.env
