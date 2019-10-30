@@ -1,11 +1,16 @@
-version: '2.1'
+version: '3.7'
 services:
     postgres:
         image: postgres:9.6
+        restart: always
         environment:
             - POSTGRES_USER=airflow
             - POSTGRES_PASSWORD=airflow
             - POSTGRES_DB=airflow
+        logging:
+            options:
+                max-size: 10m
+                max-file: "3"
 
     webserver:
         image: datarods/docker-airflow:1.10.4
@@ -15,6 +20,10 @@ services:
         environment:
             - LOAD_EX=n
             - EXECUTOR=Local
+        logging:
+            options:
+                max-size: 10m
+                max-file: "3"
         volumes:
             - ./dags:/usr/local/airflow/dags
             # Uncomment to include custom plugins
