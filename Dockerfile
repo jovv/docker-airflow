@@ -6,7 +6,7 @@
 FROM python:3.7-slim-stretch
 LABEL maintainer="datarods"
 
-# Never prompts the user for choices on installation/configuration of packages
+# Never prompt the user for choices on installation/configuration of packages
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM linux
 
@@ -23,6 +23,9 @@ ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 ENV LC_CTYPE en_US.UTF-8
 ENV LC_MESSAGES en_US.UTF-8
+
+# Disable noisy "Handling signal" log messages:
+ENV GUNICORN_CMD_ARGS --log-level WARNING
 
 RUN set -ex \
     && buildDeps=' \
