@@ -1,17 +1,17 @@
-# AUTHOR: Matthieu "Puckel_" Roisil, datarods
+# AUTHOR: Matthieu "Puckel_" Roisil, datarods, jovv
 # DESCRIPTION: Basic Airflow container
-# BUILD: docker build --rm -t datarods/docker-airflow .
-# SOURCE: https://github.com/datarods/docker-airflow
+# BUILD: docker build --rm -t jovv/docker-airflow .
+# SOURCE: https://github.com/jovv/docker-airflow
 
 FROM python:3.7-slim-stretch
-LABEL maintainer="datarods"
+LABEL maintainer="jovv"
 
 # Never prompt the user for choices on installation/configuration of packages
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM linux
 
 # Airflow
-ARG AIRFLOW_VERSION=1.10.4
+ARG AIRFLOW_VERSION=1.10.12
 ARG AIRFLOW_USER_HOME=/usr/local/airflow
 ARG AIRFLOW_DEPS=""
 ARG PYTHON_DEPS=""
