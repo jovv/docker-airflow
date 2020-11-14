@@ -26,8 +26,9 @@ sftp-config.json
 __pycache__
 venv
 
-# PyCharm
+# IDE
 .idea/
+.vscode/
 
 # Secrets
 secrets.env
