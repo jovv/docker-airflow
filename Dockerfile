@@ -1,17 +1,17 @@
-# AUTHOR: Matthieu "Puckel_" Roisil, datarods
+# AUTHOR: Matthieu "Puckel_" Roisil, datarods, jovv
 # DESCRIPTION: Basic Airflow container
-# BUILD: docker build --rm -t datarods/docker-airflow .
-# SOURCE: https://github.com/datarods/docker-airflow
+# BUILD: docker build --rm -t jovv/docker-airflow .
+# SOURCE: https://github.com/jovv/docker-airflow
 
 FROM python:3.7-slim-stretch
-LABEL maintainer="datarods"
+LABEL maintainer="jovv"
 
 # Never prompt the user for choices on installation/configuration of packages
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM linux
 
 # Airflow
-ARG AIRFLOW_VERSION=1.10.4
+ARG AIRFLOW_VERSION=1.10.12
 ARG AIRFLOW_USER_HOME=/usr/local/airflow
 ARG AIRFLOW_DEPS=""
 ARG PYTHON_DEPS=""
@@ -58,7 +58,7 @@ RUN set -ex \
     && pip install pyOpenSSL \
     && pip install ndg-httpsclient \
     && pip install pyasn1 \
-    && pip install apache-airflow[crypto,celery,postgres,hive,jdbc,mysql,ssh${AIRFLOW_DEPS:+,}${AIRFLOW_DEPS}]==${AIRFLOW_VERSION} \
+    && pip install apache-airflow[crypto,celery,postgres,hive,jdbc,mysql,ssh${AIRFLOW_DEPS:+,}${AIRFLOW_DEPS}]==${AIRFLOW_VERSION} --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-1.10.12/constraints-3.7.txt" \
     && pip install 'redis==3.2' \
     && if [ -n "${PYTHON_DEPS}" ]; then pip install ${PYTHON_DEPS}; fi \
     && apt-get purge --auto-remove -yqq $buildDeps \
